@@ -1,0 +1,11 @@
+- name: Obtener github.com/molavec/git-tools
+  git:
+    repo: https://github.com/molavec/git-tools.git
+    #repo: git@github.com:molavec/git-tools.git
+    #key_file: ~/.ssh/id_ed25519
+    #accept_hostkey: yes
+    dest: ~/git/tools/git-tools
+    remote: origin-https
+  notify:
+    - 'symlink gitattributesgen to ~/bin'
+    - 'symlink gitignoregen to ~/bin'

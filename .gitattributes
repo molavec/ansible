@@ -1,0 +1,21 @@
+#Añade aquí archivos que desees añadir
+#Extensiones de imagen
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.svg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+
+#Extensiones de video
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+
+#Extensiones de fuentes
+*.ttf filter=lfs diff=lfs merge=lfs -text *.otf filter=lfs diff=lfs merge=lfs -text *.pfb filter=lfs diff=lfs merge=lfs -text *.pss filter=lfs diff=lfs merge=lfs -text *.pfm filter=lfs diff=lfs merge=lfs -text
+
+#Extensiones de video
+*.rar filter=lfs diff=lfs merge=lfs -text
+*.7z filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+
+#Extensiones de video
+*.sketch filter=lfs diff=lfs merge=lfs -text

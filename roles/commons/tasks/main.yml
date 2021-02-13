@@ -1,0 +1,10 @@
+- name: create ~/bin directory
+  file:
+    path: ~/bin
+    state: directory
+
+- name: install vim
+  become: true
+  package:
+    name: vim
+      

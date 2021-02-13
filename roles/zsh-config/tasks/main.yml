@@ -1,0 +1,22 @@
+- name: install zsh
+  become: true
+  package:
+    name: zsh
+    
+- name: clone prezto
+  git:
+    repo: https://github.com/sorin-ionescu/prezto.git
+    dest: ~/.zprezto
+  notify:
+    - symlink .p10k.zsh
+    - symlink .zlogin
+    - symlink .zlogout
+    - symlink .zpreztorc
+    - symlink .zprofile
+    - symlink .zshenv
+    - symlink .zshrc
+    - download powerlevel10k required font - Droid Sans Mono for Powerline Nerd Font Complete.otf
+    - download powerlevel10k required font - MesloLGS NF Bold Italic.ttf
+    - download powerlevel10k required font - MesloLGS NF Italic.ttf
+    - download powerlevel10k required font - MesloLGS NF Bold.ttf
+    - download powerlevel10k required font - MesloLGS NF Regular.ttf

@@ -1,0 +1,14 @@
+- name: Obtener github.com/molavec/video-tools
+  git:
+    repo: https://github.com/molavec/video-tools.git
+    #repo: git@github.com:molavec/video-tools.git
+    #key_file: ~/.ssh/id_ed25519
+    #accept_hostkey: yes
+    dest: ~/git/tools/video-tools
+    remote: origin-https
+  notify:
+    - 'symlink avi2mp4 to ~/bin'
+    - 'symlink mp4concat to ~/bin'
+    - 'symlink mp4splitter to ~/bin'
+    - 'symlink video2gif to ~/bin'
+    - 'install ffmpeg'

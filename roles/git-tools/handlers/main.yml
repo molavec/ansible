@@ -1,0 +1,11 @@
+- name: symlink gitattributesgen to ~/bin
+  file:
+    src: ~/git/tools/git-tools/gitattributesgen
+    dest: ~/bin/gitattributesgen
+    state: link
+
+- name: symlink gitignoregen to ~/bin
+  file:
+    src: ~/git/tools/git-tools/gitignoregen
+    dest: ~/bin/gitignoregen
+    state: link

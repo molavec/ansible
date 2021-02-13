@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  connection: local
+  roles:
+    - commons
+    - git-tools
+    - video-tools
+    - zsh-config
+  
