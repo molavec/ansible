@@ -21,7 +21,7 @@ ansible-playbook -i ansible.cfg local.yml --user=angel --extra-vars "ansible_sud
 ## Roles
 Se crean lo siguientes roles.
 
-### Commons
+### commons
 Instala paquetes que son usualmente requeridos.
 
 * vim
@@ -31,6 +31,15 @@ Instala Scripts que son utiles para la generación de archivos git.
 
 * gitignoregen
 * gitattributesgen
+
+### node
+Instala node
+
+* nodejs
+* npm
+* yarn
+
+**Nota:** Para gestionar veriones se puede utilizar nvm pero hay que instalarlo de forma manual. 
 
 ### video-tools
 Instala scripts que son útiles para la edición de video con ffmpeg.

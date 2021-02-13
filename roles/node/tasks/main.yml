@@ -1,0 +1,14 @@
+- name: install nodejs
+  become: true
+  package:
+    name: nodejs
+
+- name: install npm
+  become: true
+  package:
+    name: npm
+
+- name: install yarn
+  become: true
+  package:
+    name: yarn

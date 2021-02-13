@@ -4,6 +4,7 @@
   roles:
     - commons
     - git-tools
+    - node
     - video-tools
     - zsh-config
   
