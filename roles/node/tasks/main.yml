@@ -7,6 +7,9 @@
   become: true
   package:
     name: npm
+  notify:
+    - set node_modules prefix
+    - set npm_cache
 
 - name: install yarn
   become: true

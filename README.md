@@ -35,15 +35,36 @@ Instala Scripts que son utiles para la generación de archivos git.
 ### node
 Instala node
 
+Tasks:
+
 * nodejs
 * npm
 * yarn
+
+Handlers:
+
+Se cambian las carpetas npm globales en el directorio Home
+para evitar tener problemas con los premisos.
+
+En computadores con multicuentas de desarrollador preferir carpeta
+por defecto para modulos globales
+
+```bash
+# define ubicación instalación modulos globales
+npm config set prefix $HOME/.npm/node_modules
+# define ubicación cache npm
+npm config set cache $HOME/.npm/npm_cache
+# añade carpeta $HOME/.npm/node_modules/bin al $PATH
+echo '# binarios de node_modules \n[[ -d ~/.npm/node_modules/ ]] && path=("$HOME/.npm/node_modules/bin" $path)\n' > $HOME/.zshrc
+
+```
+
+
 
 **Nota:** Para gestionar veriones se puede utilizar nvm pero hay que instalarlo de forma manual. 
 
 ### video-tools
 Instala scripts que son útiles para la edición de video con ffmpeg.
-
 * avi2mp4
 * mp4concat
 * mp4splitter

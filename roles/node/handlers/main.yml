@@ -1,0 +1,23 @@
+- name: set node_modules prefix
+  ansible.builtin.command: 
+    argv:
+      - npm
+      - config
+      - set
+      - prefix
+      - $HOME/.npm/node_modules
+
+- name: set npm_cache
+  ansible.builtin.command: 
+    argv:
+      - npm
+      - config
+      - set
+      - cache
+      - $HOME/.npm/npm_cache
+
+- name: set npm_cache
+  ansible.builtin.command:
+    cmd: echo '# binarios de node_modules \n[[ -d ~/.npm/node_modules/ ]] && path=("$HOME/.npm/node_modules/bin" $path)\n'
+    stdin: $HOME/.zshrc
+    stdin_add_newline: yes

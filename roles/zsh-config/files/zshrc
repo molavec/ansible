@@ -25,9 +25,10 @@ fi
 # Enviroment Variables
 
 # append
-path+=("$HOME/bin/")
+#path+=("$HOME/bin/")
 # or prepend
 # path=("$HOME/bin/" $path)
+[[ -d ~/.npm/node_modules/ ]] && path=("$HOME/.npm/node_modules/bin" $path)
 # export to sub-processes (make it inherited by child processes)
 export PATH
 
