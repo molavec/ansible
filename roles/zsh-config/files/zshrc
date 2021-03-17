@@ -36,9 +36,7 @@ export PATH
 
 # navigation aliases
 alias la="ls -la"
-
-# navigation aliases
-alias gotogit="cd ~/dev/"
+alias gotogit="cd ~/git/"
 
 # docker aliases
 alias d="docker"
@@ -50,3 +48,12 @@ alias dpi="docker images"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# PowwerLevel10k delete warning in start
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+# Goto Home and clear screen
+cd $HOME
+clear
+
+
