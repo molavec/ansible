@@ -27,10 +27,21 @@ Instala paquetes que son usualmente requeridos.
 * vim
 
 ### git-tools
-Instala Scripts que son utiles para la generación de archivos git.
+Instala Scripts que son utiles para la generación de archivos git
 
 * gitignoregen
 * gitattributesgen
+
+Realiza configuraciones de git. Para esto configurar las variables en `local.yaml`
+
+```yaml
+vars:
+    git_user_name: "Miguel Olave"
+    git_user_email: "molavec@gmail.com"
+    git_ui_color: "True"
+```
+
+
 
 ### node
 Instala node
@@ -59,8 +70,6 @@ echo '# binarios de node_modules \n[[ -d ~/.npm/node_modules/ ]] && path=("$HOME
 
 ```
 
-
-
 **Nota:** Para gestionar veriones se puede utilizar nvm pero hay que instalarlo de forma manual. 
 
 ### video-tools
@@ -84,3 +93,7 @@ Algunas recomendaciones que se siguen para esta configuración:
 **Nota:** Los dotfiles están en `ansible/roles/zsh-config/files`
 **Nota:** Para que se pueda visualizar apropiadamente el shell se debe configurar en el terminal la fuente `MesloLGS NF Regular`.
 **Nota:** En visual Studio Abrir `Preferencias -> Terminal -> font` colocar `MesloLGS-NF-Regular`
+
+# TODO
+
+Nada nuevo que hacer

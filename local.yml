@@ -1,6 +1,11 @@
 ---
 - hosts: localhost
   connection: local
+  vars:
+    git_user_name: "Miguel Olave"
+    git_user_email: "molavec@gmail.com"
+    git_ui_color: "True"
+    git_core_editor: "subl -n -w"
   roles:
     - commons
     - git-tools
