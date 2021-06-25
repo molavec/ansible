@@ -69,11 +69,12 @@
     path: ~/.local/share/fonts/
     state: directory
 
-- name: download powerlevel10k required font - Droid Sans Mono for Powerline Nerd Font Complete.otf
+- name: download powerlevel10k required font - MesloLGS NF Regular.ttf
   get_url:
-    url: https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
-    dest: ~/.local/share/fonts/Droid Sans Mono for Powerline Nerd Font Complete.otf
+    url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+    dest: ~/.local/share/fonts/MesloLGS NF Regular.ttf
     mode: '0440'
+
 
 - name: download powerlevel10k required font - MesloLGS NF Bold Italic.ttf
   get_url:
@@ -93,8 +94,8 @@
     dest: ~/.local/share/fonts/MesloLGS NF Bold.ttf
     mode: '0440'
 
-- name: download powerlevel10k required font - MesloLGS NF Regular.ttf
+- name: download powerlevel10k required font - Droid Sans Mono for Powerline Nerd Font Complete.otf
   get_url:
-    url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
-    dest: ~/.local/share/fonts/MesloLGS NF Regular.ttf
+    url: https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+    dest: ~/.local/share/fonts/Droid Sans Mono for Powerline Nerd Font Complete.otf
     mode: '0440'

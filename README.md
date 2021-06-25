@@ -83,3 +83,4 @@ Algunas recomendaciones que se siguen para esta configuración:
 **Nota:** Al finalizar el proceso de este rol, definir zsh como shell predefinida con `chsh -s /usr/bin/zsh`
 **Nota:** Los dotfiles están en `ansible/roles/zsh-config/files`
 **Nota:** Para que se pueda visualizar apropiadamente el shell se debe configurar en el terminal la fuente `MesloLGS NF Regular`.
+**Nota:** En visual Studio Abrir `Preferencias -> Terminal -> font` colocar `MesloLGS-NF-Regular`
