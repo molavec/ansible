@@ -4,6 +4,6 @@
     state: directory
 
 - name: install vim
-  become: true
+  #become: true
   package:
     name: vim

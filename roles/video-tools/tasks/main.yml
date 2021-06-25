@@ -3,9 +3,38 @@
     repo: https://github.com/molavec/video-tools.git
     dest: ~/git/tools/video-tools
     remote: origin-https
-  notify:
-    - 'symlink avi2mp4 to ~/bin'
-    - 'symlink mp4concat to ~/bin'
-    - 'symlink mp4splitter to ~/bin'
-    - 'symlink video2gif to ~/bin'
-    - 'install ffmpeg'
+  #notify:
+  #  - 'symlink avi2mp4 to ~/bin'
+  #  - 'symlink mp4concat to ~/bin'
+  #  - 'symlink mp4splitter to ~/bin'
+  #  - 'symlink video2gif to ~/bin'
+  #  - 'install ffmpeg'
+
+- name: symlink avi2mp4 to ~/bin
+  file:
+    src: ~/git/tools/video-tools/avi2mp4
+    dest: ~/bin/avi2mp4
+    state: link
+
+- name: symlink mp4concat to ~/bin
+  file:
+    src: ~/git/tools/video-tools/mp4concat.py
+    dest: ~/bin/mp4concat
+    state: link
+
+- name: symlink mp4splitter to ~/bin
+  file:
+    src: ~/git/tools/video-tools/mp4splitter.py
+    dest: ~/bin/mp4splitter
+    state: link
+
+- name: symlink video2gif to ~/bin
+  file:
+    src: ~/git/tools/video-tools/video2gif
+    dest: ~/bin/video2gif
+    state: link
+
+- name: install ffmpeg
+  #become: true
+  package:
+    name: ffmpeg

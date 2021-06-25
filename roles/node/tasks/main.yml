@@ -1,10 +1,10 @@
 - name: install nodejs
-  become: true
+  #become: true
   package:
     name: nodejs
 
 - name: install npm
-  become: true
+  #become: true
   package:
     name: npm
   notify:
@@ -12,6 +12,6 @@
     - set npm_cache
 
 - name: install yarn
-  become: true
+  #become: true
   package:
     name: yarn

@@ -1,5 +1,5 @@
 - name: install zsh
-  become: true
+  #become: true
   package:
     name: zsh
     
@@ -7,16 +7,94 @@
   git:
     repo: https://github.com/sorin-ionescu/prezto.git
     dest: ~/.zprezto
-  notify:
-    - symlink .p10k.zsh
-    - symlink .zlogin
-    - symlink .zlogout
-    - symlink .zpreztorc
-    - symlink .zprofile
-    - symlink .zshenv
-    - symlink .zshrc
-    - download powerlevel10k required font - Droid Sans Mono for Powerline Nerd Font Complete.otf
-    - download powerlevel10k required font - MesloLGS NF Bold Italic.ttf
-    - download powerlevel10k required font - MesloLGS NF Italic.ttf
-    - download powerlevel10k required font - MesloLGS NF Bold.ttf
-    - download powerlevel10k required font - MesloLGS NF Regular.ttf
+  #notify:
+    #- symlink .p10k.zsh
+    #- symlink .zlogin
+    #- symlink .zlogout
+    #- symlink .zpreztorc
+    #- symlink .zprofile
+    #- symlink .zshenv
+    #- symlink .zshrc
+    #- download powerlevel10k required font - Droid Sans Mono for Powerline Nerd Font Complete.otf
+    #- download powerlevel10k required font - MesloLGS NF Bold Italic.ttf
+    #- download powerlevel10k required font - MesloLGS NF Italic.ttf
+    #- download powerlevel10k required font - MesloLGS NF Bold.ttf
+    #- download powerlevel10k required font - MesloLGS NF Regular.ttf
+
+
+- name: symlink .p10k.zsh
+  file:
+    src: ~/git/tools/ansible/roles/zsh-config/files/p10k.zsh
+    dest: ~/.p10k.zsh
+    state: link
+
+- name: symlink .zlogin
+  file:
+    src: ~/git/tools/ansible/roles/zsh-config/files/zlogin
+    dest: ~/.zlogin
+    state: link
+
+- name: symlink .zlogout
+  file:
+    src: ~/git/tools/ansible/roles/zsh-config/files/zlogout
+    dest: ~/.zlogout
+    state: link
+
+- name: symlink .zpreztorc
+  file:
+    src: ~/git/tools/ansible/roles/zsh-config/files/zpreztorc
+    dest: ~/.zpreztorc
+    state: link
+
+- name: symlink .zprofile
+  file:
+    src: ~/git/tools/ansible/roles/zsh-config/files/zprofile
+    dest: ~/.zprofile
+    state: link
+
+- name: symlink .zshenv
+  file:
+    src: ~/git/tools/ansible/roles/zsh-config/files/zshenv
+    dest: ~/.zshenv
+    state: link
+
+- name: symlink .zshrc
+  file:
+    src: ~/git/tools/ansible/roles/zsh-config/files/zshrc
+    dest: ~/.zshrc
+    state: link
+
+- name: create ~/.local/share/fonts/
+  file:
+    path: ~/.local/share/fonts/
+    state: directory
+
+- name: download powerlevel10k required font - Droid Sans Mono for Powerline Nerd Font Complete.otf
+  get_url:
+    url: https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+    dest: ~/.local/share/fonts/Droid Sans Mono for Powerline Nerd Font Complete.otf
+    mode: '0440'
+
+- name: download powerlevel10k required font - MesloLGS NF Bold Italic.ttf
+  get_url:
+    url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
+    dest: ~/.local/share/fonts/MesloLGS NF Bold Italic.ttf
+    mode: '0440'
+
+- name: download powerlevel10k required font - MesloLGS NF Italic.ttf
+  get_url:
+    url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+    dest: ~/.local/share/fonts/MesloLGS NF Italic.ttf
+    mode: '0440'
+
+- name: download powerlevel10k required font - MesloLGS NF Bold.ttf
+  get_url:
+    url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf 
+    dest: ~/.local/share/fonts/MesloLGS NF Bold.ttf
+    mode: '0440'
+
+- name: download powerlevel10k required font - MesloLGS NF Regular.ttf
+  get_url:
+    url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+    dest: ~/.local/share/fonts/MesloLGS NF Regular.ttf
+    mode: '0440'

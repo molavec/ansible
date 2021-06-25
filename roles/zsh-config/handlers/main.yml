@@ -69,3 +69,8 @@
     url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
     dest: ~/.local/share/fonts/MesloLGS NF Regular.ttf
     mode: '0440'
+
+- name: create ~/.local/share/fonts/
+  file:
+    path: ~/.local/share/fonts/
+    state: directory
