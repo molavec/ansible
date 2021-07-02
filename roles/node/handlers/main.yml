@@ -16,7 +16,7 @@
       - cache
       - $HOME/.npm/npm_cache
 
-- name: set npm_cache
+- name: set global bin in zshrc
   ansible.builtin.command:
     cmd: echo '# binarios de node_modules \n[[ -d ~/.npm/node_modules/ ]] && path=("$HOME/.npm/node_modules/bin" $path)\n'
     stdin: $HOME/.zshrc

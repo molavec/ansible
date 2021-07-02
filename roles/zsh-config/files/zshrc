@@ -52,8 +52,9 @@ export NVM_DIR="$HOME/.nvm"
 # PowwerLevel10k delete warning in start
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
+
 # Goto Home and clear screen
-cd $HOME
-clear
+#cd $HOME
+#clear
 
 

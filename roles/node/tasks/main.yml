@@ -7,9 +7,34 @@
   #become: true
   package:
     name: npm
-  notify:
-    - set node_modules prefix
-    - set npm_cache
+  # notify:
+  #   - set node_modules prefix
+  #   - set npm_cache
+
+- name: set node_modules prefix
+  ansible.builtin.command: 
+    argv:
+      - npm
+      - config
+      - set
+      - prefix
+      - $HOME/.npm/node_modules
+
+- name: set npm_cache
+  ansible.builtin.command: 
+    argv:
+      - npm
+      - config
+      - set
+      - cache
+      - $HOME/.npm/npm_cache
+
+# ya está incluido en el .zshrc
+#- name: set global bin in zshrc
+#  ansible.builtin.command:
+#    cmd: echo '# binarios de node_modules \n[[ -d ~/.npm/node_modules/ ]] && path=("$HOME/.npm/node_modules/bin" $path)\n'
+#    stdin: $HOME/.zshrc
+#    stdin_add_newline: yes
 
 - name: install yarn
   #become: true
