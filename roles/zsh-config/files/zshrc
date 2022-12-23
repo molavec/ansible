@@ -24,12 +24,15 @@ fi
 
 # Enviroment Variables
 
-# append
+# append to path
 path+=("$HOME/bin/")
 # or prepend
 # path=("$HOME/bin/" $path)
 [[ -d ~/.npm/node_modules/ ]] && path=("$HOME/.npm/node_modules/bin" $path)
 # export to sub-processes (make it inherited by child processes)
+# N
+export N_PREFIX="$HOME/.npm/n"
+[[ -d ~/.npm/n ]] && path=("$HOME/.npm/n/bin" $path)
 export PATH
 
 # Aliases
@@ -43,18 +46,11 @@ alias d="docker"
 alias dps="docker ps -a"
 alias dpi="docker images"
 
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# PowwerLevel10k delete warning in start
+# PowerLevel10k delete warning in start
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 
-# Goto Home and clear screen
-#cd $HOME
-#clear
-
-
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 

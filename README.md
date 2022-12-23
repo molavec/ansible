@@ -60,6 +60,8 @@ para evitar tener problemas con los premisos.
 En computadores con multicuentas de desarrollador preferir carpeta
 por defecto para modulos globales
 
+Mas Info: http://npm.github.io/installation-setup-docs/installing/a-note-on-permissions.html
+
 ```bash
 # define ubicación instalación modulos globales
 npm config set prefix $HOME/.npm/node_modules
