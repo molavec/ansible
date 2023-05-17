@@ -91,11 +91,18 @@ Algunas recomendaciones que se siguen para esta configuración:
  * la configuración del estilo se define mediante `powerlevel10k`
  * los modulos y extensiones de manejan con `prezto`
 
-**Nota:** Al finalizar el proceso de este rol, definir zsh como shell predefinida con `chsh -s /usr/bin/zsh`
-**Nota:** Los dotfiles están en `ansible/roles/zsh-config/files`
-**Nota:** Para que se pueda visualizar apropiadamente el shell se debe configurar en el terminal la fuente `MesloLGS NF Regular`.
-**Nota:** En visual Studio Abrir `Preferencias -> Terminal -> font` colocar `MesloLGS-NF-Regular`
+### Pasos finales de configuración
+* Al finalizar el proceso de este rol, definir zsh como shell predefinida con 
+
+```bash
+chsh -s /usr/bin/zsh
+```
+
+* Los dotfiles están en `ansible/roles/zsh-config/files`
+
+* Para que se pueda visualizar apropiadamente el shell se debe configurar en el terminal la fuente `MesloLGS NF Regular`.
+
+* En Vßisual Studio Abrir `Preferencias -> Terminal -> font` colocar `MesloLGS-NF-Regular`
 
 # TODO
 
-Nada nuevo que hacer
