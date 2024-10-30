@@ -43,3 +43,6 @@ coverage
 #archivos heroku
 *.env
 *.dev
+
+# Visual Studio settings
+.vscode

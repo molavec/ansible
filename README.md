@@ -109,7 +109,4 @@ chsh -s /usr/bin/zsh
 
 * Para que se pueda visualizar apropiadamente el shell se debe configurar en el terminal la fuente `MesloLGS NF Regular`.
 
-* En Vßisual Studio Abrir `Preferencias -> Terminal -> font` colocar `MesloLGS-NF-Regular`
-
-# TODO
-
+* En Visual Studio Code Abrir `Preferencias -> Terminal -> font` colocar `MesloLGS-NF-Regular` o `"MesloLGS NF"` para utilizar esta fuente en el terminal
