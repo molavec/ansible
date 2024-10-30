@@ -1,10 +1,10 @@
 - name: install nodejs
-  #become: true
+  become: true
   package:
     name: nodejs
 
 - name: install npm
-  #become: true
+  become: true
   package:
     name: npm
   # notify:
@@ -36,7 +36,7 @@
 #    stdin: $HOME/.zshrc
 #    stdin_add_newline: yes
 
-- name: install yarn
+# - name: install yarn
   #become: true
-  package:
-    name: yarn
+  # package:
+    # name: yarn

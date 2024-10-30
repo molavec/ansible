@@ -3,7 +3,6 @@
 Automatización de configuraciones iniciales mediante ansible.
 Este es un repositorio con algunos archivos de configuración para evitar tener que configurar cada vez aplicaciones comunes.
 
-**Nota Importante:** Este proyecto funcione debe estar **$HOME/git/tools** para que funcione
 
 ## Instalar ansible
 
@@ -11,10 +10,18 @@ Este es un repositorio con algunos archivos de configuración para evitar tener 
 sudo apt-get install ansible
 ```
 
+## CLONAR EN CARPETA TOOLS
+Para que este proyecto funcione se debe clonar dentro de la carpeta **$HOME/git/tools** ya que algunos archivos de configuración utilizan rutas absolutas.
+
 ## Ejecución Local
 
 ```bash
 ansible-playbook -i ansible.cfg local.yml
+```
+
+Si ese script no se utiliza desde root descomentar las opciones `become: true` para para que realice la instalación como sudo.
+
+```bash 
 ansible-playbook -i ansible.cfg local.yml --user=angel --extra-vars "ansible_sudo_pass=1234"
 ```
 

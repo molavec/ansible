@@ -7,20 +7,19 @@
   git:
     repo: https://github.com/sorin-ionescu/prezto.git
     dest: ~/.zprezto
-  #notify:
-    #- symlink .p10k.zsh
-    #- symlink .zlogin
-    #- symlink .zlogout
-    #- symlink .zpreztorc
-    #- symlink .zprofile
-    #- symlink .zshenv
-    #- symlink .zshrc
-    #- download powerlevel10k required font - Droid Sans Mono for Powerline Nerd Font Complete.otf
-    #- download powerlevel10k required font - MesloLGS NF Bold Italic.ttf
-    #- download powerlevel10k required font - MesloLGS NF Italic.ttf
-    #- download powerlevel10k required font - MesloLGS NF Bold.ttf
-    #- download powerlevel10k required font - MesloLGS NF Regular.ttf
-
+  notify:
+    - symlink .p10k.zsh
+    - symlink .zlogin
+    - symlink .zlogout
+    - symlink .zpreztorc
+    - symlink .zprofile
+    - symlink .zshenv
+    - symlink .zshrc
+    - download powerlevel10k required font - Droid Sans Mono for Powerline Nerd Font Complete.otf
+    - download powerlevel10k required font - MesloLGS NF Bold Italic.ttf
+    - download powerlevel10k required font - MesloLGS NF Italic.ttf
+    - download powerlevel10k required font - MesloLGS NF Bold.ttf
+    - download powerlevel10k required font - MesloLGS NF Regular.ttf
 
 - name: symlink .p10k.zsh
   file:
@@ -65,62 +64,61 @@
     state: link
 
 - name: create ~/.local/share/fonts/
- file:
+  file:
    path: ~/.local/share/fonts/
    state: directory
 
-- name: symlink .zshrc
+- name: symlink MesloLGS 1
   file:
-    src: ~/git/tools/ansible/roles/zsh-config/files/MesloLGS\ NF\ Bold\ Italic.ttf
-    dest: ~/.local/share/fonts/MesloLGS\ NF\ Bold\ Italic.ttf
+    src: "~/git/tools/ansible/roles/zsh-config/files/MesloLGS\ NF\ Bold\ Italic.ttf"
+    dest: "~/.local/share/fonts/MesloLGS\ NF\ Bold\ Italic.ttf"
     state: link
 
-- name: symlink .zshrc
+- name: symlink MesloLGS 2
   file:
-    src: ~/git/tools/ansible/roles/zsh-config/files/MesloLGS\ NF\ Bold.ttf
-    dest: ~/.local/share/fonts/MesloLGS\ NF\ Bold.ttf
+    src: "~/git/tools/ansible/roles/zsh-config/files/MesloLGS\ NF\ Bold.ttf"
+    dest: "~/.local/share/fonts/MesloLGS\ NF\ Bold.ttf"
     state: link
 
-- name: symlink .zshrc
+- name: symlink MesloLGS 3
   file:
-    src: ~/git/tools/ansible/roles/zsh-config/files/MesloLGS\ NF\ Italic.ttf
-    dest: ~/.local/share/fonts/MesloLGS\ NF\ Italic.ttf
+    src: "~/git/tools/ansible/roles/zsh-config/files/MesloLGS\ NF\ Italic.ttf"
+    dest: "~/.local/share/fonts/MesloLGS\ NF\ Italic.ttf"
     state: link
 
-- name: symlink .zshrc
+- name: symlink MesloLGS 4
   file:
-    src: ~/git/tools/ansible/roles/zsh-config/files/MesloLGS\ NF\ Regular.ttf
-    dest: ~/.local/share/fonts/MesloLGS\ NF\ Regular.ttf
+    src: "~/git/tools/ansible/roles/zsh-config/files/MesloLGS\ NF\ Regular.ttf"
+    dest: "~/.local/share/fonts/MesloLGS\ NF\ Regular.ttf"
     state: link
 
-
-#- name: download powerlevel10k required font - MesloLGS NF Regular.ttf
-#  get_url:
+# - name: download powerlevel10k required font - MesloLGS NF Regular.ttf
+#   get_url:
 #    url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
 #    dest: ~/.local/share/fonts/MesloLGS NF Regular.ttf
 #    mode: '0440'
-#
-#
-#- name: download powerlevel10k required font - MesloLGS NF Bold Italic.ttf
-#  get_url:
+
+
+# - name: download powerlevel10k required font - MesloLGS NF Bold Italic.ttf
+#   get_url:
 #    url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
 #    dest: ~/.local/share/fonts/MesloLGS NF Bold Italic.ttf
 #    mode: '0440'
-#
-#- name: download powerlevel10k required font - MesloLGS NF Italic.ttf
-#  get_url:
+
+# - name: download powerlevel10k required font - MesloLGS NF Italic.ttf
+#   get_url:
 #    url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
 #    dest: ~/.local/share/fonts/MesloLGS NF Italic.ttf
 #    mode: '0440'
-#
-#- name: download powerlevel10k required font - MesloLGS NF Bold.ttf
-#  get_url:
+
+# - name: download powerlevel10k required font - MesloLGS NF Bold.ttf
+#   get_url:
 #    url: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf 
 #    dest: ~/.local/share/fonts/MesloLGS NF Bold.ttf
 #    mode: '0440'
-#
-#- name: download powerlevel10k required font - Droid Sans Mono for Powerline Nerd Font Complete.otf
-#  get_url:
+
+# - name: download powerlevel10k required font - Droid Sans Mono for Powerline Nerd Font Complete.otf
+#   get_url:
 #    url: https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 #    dest: ~/.local/share/fonts/Droid Sans Mono for Powerline Nerd Font Complete.otf
 #    mode: '0440'
